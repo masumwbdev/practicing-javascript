@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="handleButton()">Click here</button>
+    <p id="demo"></p>
+
+    <p id="second-demo">Can you change something?</p>
+    <button onclick="secondBtn()">Change Content</button>
+
+    <p>Changing attribute</p>
+    <button onclick="imgOne()">Img one</button>
+    <img id="img-demo" src="./img/second.png" width="200px" alt="">
+    <button onclick="imgTwo()">Second img</button>
+
+    <p id="font-demo">Changing font size</p>
+    <button onclick="fontChange()">Click for fontSize Change</button>
+
+    <p id="demo-hide">Hide element</p>
+    <button onclick="hideElem()">Hide</button>
+
+    <p id="show-demo" style="display: none;">Show hidden element</p>
+    <button onclick="showFunc()">Show</button>
+
+    <script src="jsIntro.js"></script>
 </body>
+
 </html>
