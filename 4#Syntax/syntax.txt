@@ -1,0 +1,20 @@
+The JavaScript syntax defines two types of values:
+
+1. Fixed values
+2. Variable values
+
+Fixed values are called Literals.
+Variable values are called Variables.
+
+*** variables are used to store data values.
+*** An equal sign = is used to assign values to variables.
+
+arithmetic operators ( + - * / )
+JavaScript uses arithmetic operators ( + - * / ) to compute values
+--------
+JavaScript Expressions
+An expression is a combination of values, variables, and operators
+
+---------------
+js keywords:
+JavaScript keywords are used to identify actions to be performed.
