@@ -1,0 +1,15 @@
+
+Variables defined with const cannot be Redeclared. 
+
+Variables defined with const cannot be Reassigned.
+
+Variables defined with const have Block Scope.
+
+Redeclare : const x = 6;
+            const x = 8;
+
+Reassign : const x = 4;
+            x = 5;
+
+reassign allowed for let keyword
+
