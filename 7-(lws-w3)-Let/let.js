@@ -1,6 +1,6 @@
 // can't be redeclared
-let m = "Masum"; // wrong
-let m = "Sakib"; // wrong
+// let m = "Masum"; // wrong
+// let m = "Sakib"; // wrong
 
 // using its possible redeclare
 var y = "Yell";
@@ -21,11 +21,11 @@ var b = 87;
 console.log(b);
 
 // redeclaring is not allowed for let variable
-let c = 66;
-{
-    let c = 23;
-}
-let c = 23;
+// let c = 66;
+// {
+//     let c = 23;
+// }
+// let c = 23;
 
 // redeclaring var are allowed
 var t = 23;
