@@ -10,7 +10,7 @@ console.log(sumOfAll(1000));
 const p2 = performance.now();
 console.log(p2-p1);
 
-// best way for performance
+// second way
 function sumOfAllTwo(m){
     return m * (m+1) / 2
 }
