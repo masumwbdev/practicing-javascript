@@ -1,4 +1,5 @@
 ## Javascript Note:
+
 - Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
 - `const` and `let` : These two keywords provide Block Scope in JavaScript.
 - `?` is a ternary operator
