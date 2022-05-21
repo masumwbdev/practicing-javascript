@@ -42,12 +42,12 @@
 // console.log(newNum);
 
 // // with some
-// const numbers = [64, 23, 63, 21, 56, 93, 12];
-// function myFunction(value) {
-//     return value > 55;
-// }
-// const newNum = numbers.some(myFunction);
-// console.log(newNum);
+const SomeNumbers = [64, 23, 63, 21, 56, 93, 12];
+function myFunction(value) {
+    return value > 55;
+}
+const newSMNum = SomeNumbers.some(myFunction);
+console.log(newSMNum);
 
 // indexOf
 const cars = ["Toyota", "Fort", "BMW"];
