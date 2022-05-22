@@ -75,3 +75,136 @@ Math.floor(Math.random() * 10) + 1
 - "2" > "12" returns true. When comparing two strings, "2" will be greater than "12", because alphabetically 1 is less than 2.
 - use `for of` in an array also for `iterate`
 - use `for in` into an object
+- A javascript Set is a collection of unique values.
+- A Map holds `key-value` pairs where the keys can be any datatype.
+- A Map remembers the original insertion order of the keys.
+#### In javascript there are 5 different data types that can contain values: 
+1. string
+2. number
+3. boolean
+4. object
+5. function
+
+#### 2 Data types that connot contain values:
+1. null
+2. undefined
+
+#### There are 6 types of objects:
+1. Object
+2. Data
+3. Array
+4. String
+5. Number
+6. Boolean
+
+``` javascript
+typeof "John"                 // Returns "string"
+typeof 3.14                   // Returns "number"
+typeof NaN                    // Returns "number"
+typeof false                  // Returns "boolean"
+typeof [1,2,3,4]              // Returns "object"
+typeof {name:'John', age:34}  // Returns "object"
+typeof new Date()             // Returns "object"
+typeof function () {}         // Returns "function"
+typeof myCar                  // Returns "undefined" *
+typeof null                   // Returns "object"
+
+// The data type of NaN is number
+// The data type of an array is object
+// The data type of a date is object
+// The data type of null is object
+// The data type of an undefined variable is undefined *
+// The data type of a variable that has not been assigned a value is also undefined *
+```
+#### Primitive Data
+- A primitive data value is a single simple data value with no additional properties and methods.
+#### The typeof operator can return one of these primitive types:
+1. string
+2. number
+3. boolean
+4. undefined
+#### The typeof operator can return one of two complex types:
+1. function
+2. object
+- The typeof operator returns "object" for objects, arrays, and null.
+- Javascript function is an object.
+- The typeof operator is not a variable. It is an operator. Operators ( + - * / ) do not have any data type.
+- the typeof operator always returns a string
+- In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+- In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+- Unfortunately, in JavaScript, the data type of null is an object.
+
+#### Difference Between Undefined and Null
+Undefined mane value nei but memory te reference ace. null hocche seta exist kore na. 2 tar type alada. null er type object and Undefined er type hocce Undefined.
+
+#### undefined and null are equal in value but different in type:
+``` javascript
+typeof undefined           // undefined
+typeof null                // object
+null === undefined         // false
+null == undefined          // true
+```
+- `parseFloat()` Parses a string and returns a floating point number
+- `parseInt()` Parses a string and returns an integer
+
+#### Automatic Type Conversion:
+``` javascript
+5 + null    // returns 5         because null is converted to 0
+"5" + null  // returns "5null"   because null is converted to "null"
+"5" + 2     // returns "52"      because 2 is converted to "2"
+"5" - 2     // returns 3         because "5" is converted to 5
+"5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
+```
+#### Converting decimal to binary:
+const n = 5;
+``` javascript
+console.log(n.toString(2)); // returns 101. binary 0101
+const x = 1; 
+console.log(x.toString(2)); // returns 1. binary 0001
+// or
+function dec2bin(dec){
+  return (dec >>> 0).toString(2);
+}
+```
+#### Converting binary to decimal:
+``` javascript 
+console.log(0b0101.toString(10)); // add extra 0b
+// or
+function bin2dec(bin){
+  return parseInt(bin, 2).toString(10);
+}
+```
+#### Regular expression syntax:
+``` javascript
+/*
+/pattern/modifiers;
+/bangladesh/i;
+/bangladesh/i  is a regular expression.
+bangladesh is a pattern (to be used in a search).
+i  is a modifier (modifies the search to be case-insensitive).
+*/
+```
+- In JavaScript, regular expressions are often used with the two string methods: `search()` and `replace()`.
+#### Regular expression example:
+``` javascript
+const myNote = "I love my Country";
+console.log(myNote.search(/country/i));
+```
+#### Replace with regular expression:
+``` javascript
+const myNote2 = "I love my CITY. My city name is Mym";
+console.log(myNote2.replace(/city/ig, "District"));
+```
+#### Regular Expression Modifiers:
+| Modifier | Description |
+| ----- | ----- |
+| i | Perform case-insensitive matching |
+| g | Perform a global match (find all matches rather than stopping after the first match) |
+| m | Perform multiline matching |
+
+#### Regular Expression Patterns:
+| Expression | Description |
+| ----- | ----- |
+| [abc] | Find any of the characters between the brackets |
+| [0-9] | Find any of the digits between the brackets |
+| (x|y) | Find any of the alternatives separated with |
