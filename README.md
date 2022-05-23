@@ -156,8 +156,8 @@ null == undefined          // true
 "5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
 ```
 #### Converting decimal to binary:
-const n = 5;
 ``` javascript
+const n = 5;
 console.log(n.toString(2)); // returns 101. binary 0101
 const x = 1; 
 console.log(x.toString(2)); // returns 1. binary 0001
@@ -208,3 +208,38 @@ console.log(myNote2.replace(/city/ig, "District"));
 | [abc] | Find any of the characters between the brackets |
 | [0-9] | Find any of the digits between the brackets |
 | (x|y) | Find any of the alternatives separated with |
+
+- javascript will actually create an error object with two properties: `name` and `message`. 
+- catch(err){} `err` is an object.
+- The `throw` statement allows to create a custom error.
+- scope determines the accessibility (visibility) of variables.
+#### javascript has 3 types of scope:
+1. Block scope
+2. Function scope
+3. Global scope
+- variables declared inside a {} block cannot be accessed from outside the block
+- `let` and `const` keywords provide block scope in javascript.
+- `var` is function and global scope both.
+- In javascript, `objects` and `functions` are also variables.
+- Hoisting is javascript's default behavior of moving deciarations to the top.
+#### Hoisting example:
+``` javascript
+// Hoisting:
+y = "Masum"; // assignment
+console.log(y);
+var y; // declare
+
+// Hoisting with let (ReferenceError):
+y = 9;
+console.log(y);
+let y;
+
+/* মেশিন ডিক্লেয়ার করা var টা উপরে ধরে নেয় পড়ার সময়। মেমোরিতে ভ্যারিয়েবল y এর জন্য একটা জায়গা রেখে দেয় এবং
+ভ্যারিয়েবল y এর ভ্যালু টা undefined করা থাকে। 
+let এর ক্ষেত্রে let টা উপরে নিয়ে যায় কিন্তু সেখানে ভ্যারিয়েবল y এর জন্য মেমরি তে কোনো জায়গা রাখে না।
+ভ্যারিয়েবল y এর ভ্যালু undefined ও থাকে না। ভ্যারিয়েবল y টা কে রেফারেন্স করতে পারে না যার কারণে ReferenceError
+দেয়।  */
+```
+- let, const  এবং var সবগুলোই hoisted হয়।  কিন্তু ডিক্লেয়ার করা let, const ভ্যারিয়েবল যখন উপরে যায় তখন let, const এর ক্ষেত্রে ভ্যালু টা মেমোরিতে undefined assigned হয় না যার কারণে ReferenceError দেয়। যে সময় টুকু এই ঘটনাটা ঘটে, মেমরি তে কোনো জায়গা এসাইন করতে পারে না এই সময় টা কে `temporary dead zone` বলা হয়।
+- Variables difined with let and const are hoisted to the top of the block, but not initialized.
+- Using a let variable before it is declared will result in a `ReferenceError`.
