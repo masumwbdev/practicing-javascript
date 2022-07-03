@@ -33,7 +33,7 @@ console.log(Math.min.apply(null, sortNum));
 - The `every()` method check if all array values pass a test.
 - The `some()` method check if some array values pass a test.
 - The `find()` method returns the value of the first array element
-- যে ধরণের অবজেক্ট গুলোকে `iterate` করা যায়, একটা একটা করে যাওয়া যায় সেগুলো কে `iterable object` বলে।
+- যে ধরণের অবজেক্ট গুলোকে `iterate` করা যায়, একটা একটা লুপ করেে যাওয়া যায় সেগুলো কে `iterable object` বলে।
 - The `filter()` method creates a new array with array elements.
 - The `keys()` method returns an Array Iterator object with the keys of an array.
 - There are 4 common methods to round a number to an integer
@@ -243,3 +243,144 @@ let এর ক্ষেত্রে let টা উপরে নিয়ে যা�
 - let, const  এবং var সবগুলোই hoisted হয়।  কিন্তু ডিক্লেয়ার করা let, const ভ্যারিয়েবল যখন উপরে যায় তখন let, const এর ক্ষেত্রে ভ্যালু টা মেমোরিতে undefined assigned হয় না যার কারণে ReferenceError দেয়। যে সময় টুকু এই ঘটনাটা ঘটে, মেমরি তে কোনো জায়গা এসাইন করতে পারে না এই সময় টা কে `temporary dead zone` বলা হয়।
 - Variables difined with let and const are hoisted to the top of the block, but not initialized.
 - Using a let variable before it is declared will result in a `ReferenceError`.
+- The `includes()` method returns true if an array contains a specified value.
+- The includes() method returns false if the value is not found.
+- The `Array.from()` method returns an array from any object with a length property.
+- The `Array.from()` method returns an array from any iterable object.
+
+#### `Array.from` example:
+``` javascript
+let text = "ABCDEFG"
+const myArr = Array.from(text);
+console.log(myArr) // returns ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+```
+
+- যখন কোনো অবজেক্ট এর মধ্যে প্রোপার্টি আকারে ফাঙ্কশন থাকে তখন সেটাকে বলা হয় `মেথড` বা `অবজেক্ট এর মেথড`।
+- arrow functions were introduced in ES6
+
+#### Javascript Classes:
+- ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
+- JavaScript Classes are templates for JavaScript Objects.
+- Use the keyword class to create a class.
+- Always add a method named `constructor()`
+- A JavaScript class is not an object. It is a `template` for Javascript object
+
+#### Class example:
+``` javascript
+class Mobile{
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+    best(){
+        console.log(`${this.name} is the best phone in the world.`)
+    }
+}
+const realme = new Mobile("Realme", 19800);
+const xiaomi = new Mobile("Xiaomi", 49900);
+realme.best();
+console.log(realme, xiaomi);
+```
+
+- `JSON` stands for JavaScript Object Notation.
+- falsy value = false, undefined, null, '', NaN, 0
+
+#### In JavaScript, almost "everything" is an object.
+1. Booleans can be objects (if defined with the new keyword)
+2. Numbers can be objects (if defined with the new keyword)
+3. Strings can be objects (if defined with the new keyword)
+4. Maths are always objects
+5. Regular expressions are always objects
+6. Arrays are always objects
+7. Functions are always objects
+8. Objects are always objects
+- All JavaScript values, except primitives, are objects.
+
+#### JavaScript defines 7 types of `primitive` data types:
+1. string
+2. number
+3. boolean
+4. null
+5. undefined
+6. symbol
+7. bigint
+
+- `Primitive` values are `immutable` (they are hardcoded and cannot be changed).
+- if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.
+- Object values are written as name : value pairs (name and value separated by a colon).
+- JavaScript Objects are Mutable
+- Objects are mutable: They are addressed by reference, not by value.
+
+- If person is an object, the following statement will not create a copy of person:
+``` javascript
+const x = person;  // Will not create a copy of person.
+```
+``` javascript
+const person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50, eyeColor:"blue"
+}
+const x = person; // The object x is not a copy of person. It is person. Both x and person are the same object.
+x.age = 10;      // Will change both x.age and person.age
+```
+- It is considered good practice to name constructor functions with an upper-case first letter.
+
+#### constructor function example: 
+``` javascript
+// constructor function 
+function Person(first, last, age){
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.fullName = function(){
+        return this.firstName + " " + this.lastName;
+    }
+}
+const masum = new Person("Masum", "Mia", 25);
+const john = new Person("john", "smith", 23);
+john.salary = 2312; // Adding a Method to an Object
+// Adding a Property to a Constructor
+Person.color = "black"; // You cannot add a new property to an object 
+// constructor the same way you add a new property to an existing object:
+console.log(masum);
+// In the example above, function Person() is an object constructor function.
+// Objects of the same type are created by calling the constructor function with the new keyword.
+```
+
+#### What is `this`?
+- In JavaScript, the `this` keyword refers to an object.
+- The `this` keyword refers to different objects depending on how it is used:
+1. In an object method, this refers to the object.
+2. Alone, this refers to the global object.
+3. In a function, this refers to the global object.
+4. In a function, in strict mode, this is undefined.
+5. In an event, this refers to the element that received the event.
+- Methods like call(), apply(), and bind() can refer `this` to any object.
+- `this` is not a variable. It is a `keyword`. You cannot change the value of this.
+
+#### Built-in JavaScript Constructors:
+``` javascript
+// JavaScript has built-in constructors for native objects:
+new String()    // A new String object
+new Number()    // A new Number object
+new Boolean()   // A new Boolean object
+new Object()    // A new Object object
+new Array()     // A new Array object
+new RegExp()    // A new RegExp object
+new Function()  // A new Function object
+new Date()      // A new Date object
+```
+- The `Math()` object is not in the list. `Math` is a global object. The new keyword cannot be used on Math.
+
+#### Using the prototype Property:
+``` javascript
+// The JavaScript prototype property allows you to add new properties to object constructors:
+function Person(first, last, age, eyecolor) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eyecolor;
+}
+Person.prototype.nationality = "English";
+```
