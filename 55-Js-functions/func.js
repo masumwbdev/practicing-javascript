@@ -22,3 +22,4 @@ function myFun(a){
 }
 const res = myFun(4);
 console.log(res);
+
