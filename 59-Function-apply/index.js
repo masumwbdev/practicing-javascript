@@ -10,6 +10,7 @@ const person = {
   }
   
   // This will return "Mary Doe":
+
   person.fullName.apply(person1);
 
   const personTwo = {
@@ -19,14 +20,14 @@ const person = {
   }
   
   const person2 = {
-    firstName:"John",
+    firstName:"masum",
     lastName: "Doe"
   }
   
   personTwo.fullName.apply(person2, ["Oslo", "Norway"]);
 
 //   Compared with the call() method:
-const personThree = {
+const person_three = {
     fullName: function(city, country) {
       return this.firstName + " " + this.lastName + "," + city + "," + country;
     }
@@ -37,4 +38,4 @@ const personThree = {
     lastName: "Doe"
   }
   
-  personThree.fullName.call(person3, "Oslo", "Norway");
+  person_three.fullName.call(person3, "Oslo", "Norway");
